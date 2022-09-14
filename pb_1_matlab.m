@@ -2,16 +2,15 @@ clc;
 close all;
 clear all;
 Ac=input('Enter carrier signal amplitude = ');
-Am=input('Enter message signal amplitude = ');
+Am=input('Enter message signal amplitude = '); % m=Am/Ac,m>=0 and m<=1 otherwise we loss some of message data
 fc=input('Enter carrier frequency = ');
-fm=input('Enter message frequency = ');% fm<fc
-%m=input('Enter modulation index = ');
+fm=input('Enter message frequency = ');
 t=input('Enter time period = ');
 t1 = (0:.001:t);
 sm=Am*sin(2*pi*fm*t1); % message signal
 sc=Ac*sin(2*pi*fc*t1); % carrier signal
 m=Am/Ac;
-eq=Ac.*(1+m.*sin(2*pi*fm*t1)).*(sin(2*pi*fc*t1));  %Modulated Signal
+eq=Ac.*(1+m.*sin(2*pi*fm*t1)).*(sin(2*pi*fc*t1));  % Modulated Signal
 subplot(3,1,1);
 plot(t1,sm);
 xlabel('Time(sec)');
