@@ -5,7 +5,7 @@ t=0:0.0001:0.25;
 B=10;
 
 fm=25;
-mt=sin(2*pi*fm*t);
+mt=cos(2*pi*fm*t);
 subplot(3,1,1);
 plot(t,mt);
 xlabel("Time(sec)");
