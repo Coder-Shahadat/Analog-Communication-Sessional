@@ -4,7 +4,6 @@ fc = 100;
 fm = 10;
 am = 7;
 ac = 10;
-
 %% generating message signal 
 mt = am*sin(2*pi*fm*t);
 subplot(4,1,1);
@@ -13,7 +12,6 @@ title('message signal ');
 xlabel('time');
 ylabel('amplitude');
 grid on;
-
 %% generating carrier  signal
 ct = ac*sin(2*pi*fc*t);
 subplot(4,1,2);
@@ -22,7 +20,6 @@ title('message signal ');
 xlabel('time');
 ylabel('amplitude');
 grid on;
-
 %% generating modulated signal 
 k = 0.5;
 yt = ac.*(1+k*sin(2*pi*fm*t)).*sin(2*pi*fc*t);
@@ -32,7 +29,6 @@ title('modulated signal ');
 xlabel('time');
 ylabel('amplitude');
 grid on;
-
 %% generating demodulated signal 
 r = abs(yt); %Rectified Signal
 [b,a] = butter(10,2*fc/fs);
