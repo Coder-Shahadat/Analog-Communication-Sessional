@@ -25,14 +25,14 @@ ylabel('Amplitude(V)');
 title('Carrier signal');
 
 subplot(4,1,3);
-plot(t1,eq,t1,Ac+sm,t1,-Ac-sm);
+plot(t1,eq,t1,Ac+mt,t1,-Ac-mt);
 xlabel('Time(sec)');
 ylabel('Amplitude(V)');
 title('Modulated signal');
 
-dm = (1/pi)*(Ac+sm);
+dm = (1/pi)*(Ac+mt);
 subplot(4,1,4);
-plot(t1,dm,t1,sm);
+plot(t1,dm);
 xlabel('Time(sec)');
 ylabel('Amplitude(V)');
 title('deModulated signal');
