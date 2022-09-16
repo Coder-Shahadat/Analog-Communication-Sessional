@@ -22,7 +22,7 @@ ylabel("Amplitude");
 title("Carrier Signal");
 grid on;
 
-FM=sin(2*pi*fc*t+(B.*sin(2*pi*fm*t)));
+FM=sin(2*pi*fc*t+(B.*sin(2*pi*fm*t)));  %B=(kf*vm/wm)
 subplot(3,1,3);
 plot(t,FM);
 xlabel("Time(sec)");
